@@ -133,6 +133,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./assetc/json.json":
+/*!**************************!*\
+  !*** ./assetc/json.json ***!
+  \**************************/
+/*! exports provided: title, default */
+/***/ (function(module) {
+
+eval("module.exports = JSON.parse(\"{\\\"title\\\":\\\"это title\\\"}\");\n\n//# sourceURL=webpack:///./assetc/json.json?");
+
+/***/ }),
+
 /***/ "./css/main.css":
 /*!**********************!*\
   !*** ./css/main.css ***!
@@ -152,7 +163,7 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./Post.js\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/main.css */ \"./css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Уроки webpack')\r\nconsole.log('Post:', post.toString())\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./Post.js\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/main.css */ \"./css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _assetc_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assetc/json */ \"./assetc/json.json\");\nvar _assetc_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./assetc/json */ \"./assetc/json.json\", 1);\n\r\n\r\n\r\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Уроки webpack')\r\nconsole.log('Post:', post.toString())\r\n\r\nconsole.log(JSON.title)\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 
