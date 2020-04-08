@@ -1,7 +1,7 @@
 import Post from './Post'
+import json from './assetc/json'
+import webpackLogo from './assetc/webpack.png'
 import './css/main.css'
-import './assetc/json'
-const post = new Post('Уроки webpack')
+const post = new Post('Уроки webpack', webpackLogo)
 console.log('Post:', post.toString())
-
-console.log(JSON.title)
+console.log('JSON:',json)

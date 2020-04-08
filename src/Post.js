@@ -1,17 +1,19 @@
 export  default class Post{
-	constructor(title){
+	constructor(title, img){
 		this.title = title
+		this.img = img
 		this.date = new Date 
 	}
 
 	toString(){
 		return JSON.stringify({
 			title: this.title,
+			img: this.img,
 			date: this.date.toJSON()
 		})
 	}
 
 	get postUpperCase(){
-		return this.title.uppercase()
+		return this.title.toUpperCase()
 	}
 }
