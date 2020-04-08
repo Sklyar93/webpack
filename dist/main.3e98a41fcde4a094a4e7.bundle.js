@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\nclass Post{\r\n\tconstructor(title){\r\n\t\tthis.title = title\r\n\t\tthis.date = new Date \r\n\t}\r\n\r\n\ttoString(){\r\n\t\treturn JSON.stringify({\r\n\t\t\ttitle: this.title,\r\n\t\t\tdate: this.date.toJSON()\r\n\t\t})\r\n\t}\r\n}\n\n//# sourceURL=webpack:///./src/Post.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\nclass Post{\r\n\tconstructor(title){\r\n\t\tthis.title = title\r\n\t\tthis.date = new Date \r\n\t}\r\n\r\n\ttoString(){\r\n\t\treturn JSON.stringify({\r\n\t\t\ttitle: this.title,\r\n\t\t\tdate: this.date.toJSON()\r\n\t\t})\r\n\t}\r\n\r\n\tget postUpperCase(){\r\n\t\treturn this.title.uppercase()\r\n\t}\r\n}\n\n//# sourceURL=webpack:///./src/Post.js?");
 
 /***/ }),
 
