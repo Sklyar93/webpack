@@ -81,32 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./analytics.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/Post.js":
-/*!*********************!*\
-  !*** ./src/Post.js ***!
-  \*********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\nclass Post{\r\n\tconstructor(title){\r\n\t\tthis.title = title\r\n\t\tthis.date = new Date \r\n\t}\r\n\r\n\ttoString(){\r\n\t\treturn JSON.stringify({\r\n\t\t\ttitle: this.title,\r\n\t\t\tdate: this.date.toJSON()\r\n\t\t})\r\n\t}\r\n\r\n\tget postUpperCase(){\r\n\t\treturn this.title.uppercase()\r\n\t}\r\n}\n\n//# sourceURL=webpack:///./src/Post.js?");
-
-/***/ }),
-
-/***/ "./src/index.js":
+/***/ "./analytics.js":
 /*!**********************!*\
-  !*** ./src/index.js ***!
+  !*** ./analytics.js ***!
   \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./src/Post.js\");\n\r\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Уроки webpack')\r\nconsole.log('Post:', post.toString())\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("function createAnalytics(){\r\n\tlet count = 0\r\n\tlet isDestroyed = false\r\n\r\n\tconst listener = ()=> count++\r\n\r\n\tdocument.addEventListener('click', listener)\r\n\treturn{\r\n\t\tdestroy(){\r\n\t\t\tdocument.removeEventListener('click', listener)\r\n\t\t\tisDestroyed = true \r\n\t\t},\r\n\t\tgetClicks(){\r\n\t\t\tif(isDestroyed){\r\n\t\t\t\treturn 'analytics destroyed'\r\n\t\t\t}\r\n\t\t\treturn count\r\n\t\t}\r\n\t}\r\n\t\r\n}\r\n\r\nwindow.analytics = createAnalytics()\n\n//# sourceURL=webpack:///./analytics.js?");
 
 /***/ })
 

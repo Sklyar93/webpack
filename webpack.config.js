@@ -2,10 +2,11 @@ const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const{CleanWebpackPlugin} = require('clean-webpack-plugin')//очищение в папке dist от страых фаилов
 module.exports = {
+	context: path.resolve(__dirname, 'src'), //работать с папкой src
 	mode: 'development', // режим разработки
 	entry:{
-		main: './src/index.js', // входной фаил
-		analytics: './src/analytics.js'
+		main: './index.js', // входной фаил
+		analytics: './analytics.js'
 	},
 	output: { // куда складывать
 		filename: '[name].[contenthash].bundle.js', //формирование для разных фаилов и для обхода кэша
@@ -14,9 +15,15 @@ module.exports = {
 	plugins: [
 		new htmlWebpackPlugin(
 			{
-				template: './src/index.html'
+				template: './index.html'
 			}
 		),
 		new CleanWebpackPlugin()
-	]
+	],
+	module: {
+		rules: [{
+			test: /\.css$/,
+			use: ['style-loader','css-loader']
+		}]
+	}
 }
