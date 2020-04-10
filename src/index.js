@@ -7,4 +7,4 @@ import csv from './assetc/TemplateImportOU.csv'
 import './css/main.css'
 const post = new Post('Уроки webpack', webpackLogo)
 
-$('pre').html(post.toString())
+$('pre').addClass('red').html(post.toString())
