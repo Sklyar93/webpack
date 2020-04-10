@@ -1,6 +1,7 @@
 const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const{CleanWebpackPlugin} = require('clean-webpack-plugin')//очищение в папке dist от страых фаилов
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = {
 	context: path.resolve(__dirname, 'src'), //работать с папкой src
 	mode: 'development', // режим разработки
@@ -29,7 +30,13 @@ module.exports = {
 				template: './index.html'
 			}
 		),
-		new CleanWebpackPlugin()
+		new CleanWebpackPlugin(),
+		new CopyWebpackPlugin([
+			{
+				from: path.resolve(__dirname, 'src/favicon.ico'),
+				to: path.resolve(__dirname, 'dist')
+			}
+		])
 	],
 	module: {
 		rules: [{
