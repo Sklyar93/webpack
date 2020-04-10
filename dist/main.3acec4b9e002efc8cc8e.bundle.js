@@ -156,6 +156,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./assetc/TemplateImportOU.csv":
+/*!*************************************!*\
+  !*** ./assetc/TemplateImportOU.csv ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = [[\"������� ������������� ��� �������\",\"parent\",\"title\",\"address\"],[\"OU001\",\"\",\"��� \\\"������\\\"\",\"������, ��������� ��. 134\"],[\"OU002\",\"OU001\",\"�������������\",\"������, ��������� ��. 134\"],[\"OU003\",\"OU002\",\"����� ���������� ������������\",\"������������, ������������ 180\"],[\"OU004\",\"\",\"��� \\\"������\\\"\"],[\"OU005\",\"OU004\",\"������ 1\"]]\n\n//# sourceURL=webpack:///./assetc/TemplateImportOU.csv?");
+
+/***/ }),
+
+/***/ "./assetc/email.xml":
+/*!**************************!*\
+  !*** ./assetc/email.xml ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = {\"email\":{\"to\":[\"Tove\"],\"from\":[\"Jani\"],\"heading\":[\"Напоминание\"],\"body\":[\"Не забудь обо мне в эти выходные!\"]}}\n\n//# sourceURL=webpack:///./assetc/email.xml?");
+
+/***/ }),
+
 /***/ "./assetc/json.json":
 /*!**************************!*\
   !*** ./assetc/json.json ***!
@@ -198,7 +220,7 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./Post.js\");\n/* harmony import */ var _assetc_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assetc/json */ \"./assetc/json.json\");\nvar _assetc_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./assetc/json */ \"./assetc/json.json\", 1);\n/* harmony import */ var _assetc_webpack_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assetc/webpack.png */ \"./assetc/webpack.png\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/main.css */ \"./css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Уроки webpack', _assetc_webpack_png__WEBPACK_IMPORTED_MODULE_2__[\"default\"])\r\nconsole.log('Post:', post.toString())\r\nconsole.log('JSON:',_assetc_json__WEBPACK_IMPORTED_MODULE_1__)\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./Post.js\");\n/* harmony import */ var _assetc_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assetc/json */ \"./assetc/json.json\");\nvar _assetc_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./assetc/json */ \"./assetc/json.json\", 1);\n/* harmony import */ var _assetc_webpack_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assetc/webpack.png */ \"./assetc/webpack.png\");\n/* harmony import */ var _assetc_email_xml__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assetc/email.xml */ \"./assetc/email.xml\");\n/* harmony import */ var _assetc_email_xml__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assetc_email_xml__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assetc/TemplateImportOU.csv */ \"./assetc/TemplateImportOU.csv\");\n/* harmony import */ var _assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./css/main.css */ \"./css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_5__);\n\r\n\r\n\r\n\r\n\r\n\r\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Уроки webpack', _assetc_webpack_png__WEBPACK_IMPORTED_MODULE_2__[\"default\"])\r\nconsole.log('Post:', post.toString())\r\nconsole.log('JSON:',_assetc_json__WEBPACK_IMPORTED_MODULE_1__)\r\nconsole.log('xml', _assetc_email_xml__WEBPACK_IMPORTED_MODULE_3___default.a)\r\nconsole.log('csv', _assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_4___default.a)\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 
