@@ -12,6 +12,12 @@ module.exports = {
 		filename: '[name].[contenthash].bundle.js', //формирование для разных фаилов и для обхода кэша
 		path: path.resolve(__dirname, 'dist')
 	},
+	resolve:{
+		extensions: ['.js', '.json', '.png'],
+		alias: {
+			'@models': path.resolve(__dirname, 'src/models')
+		}
+	},
 	plugins: [
 		new htmlWebpackPlugin(
 			{

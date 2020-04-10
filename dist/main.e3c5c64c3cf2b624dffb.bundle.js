@@ -144,18 +144,6 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 
 /***/ }),
 
-/***/ "./Post.js":
-/*!*****************!*\
-  !*** ./Post.js ***!
-  \*****************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\nclass Post{\r\n\tconstructor(title, img){\r\n\t\tthis.title = title\r\n\t\tthis.img = img\r\n\t\tthis.date = new Date \r\n\t}\r\n\r\n\ttoString(){\r\n\t\treturn JSON.stringify({\r\n\t\t\ttitle: this.title,\r\n\t\t\timg: this.img,\r\n\t\t\tdate: this.date.toJSON()\r\n\t\t})\r\n\t}\r\n\r\n\tget postUpperCase(){\r\n\t\treturn this.title.toUpperCase()\r\n\t}\r\n}\n\n//# sourceURL=webpack:///./Post.js?");
-
-/***/ }),
-
 /***/ "./assetc/TemplateImportOU.csv":
 /*!*************************************!*\
   !*** ./assetc/TemplateImportOU.csv ***!
@@ -220,7 +208,19 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./Post.js\");\n/* harmony import */ var _assetc_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assetc/json */ \"./assetc/json.json\");\nvar _assetc_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./assetc/json */ \"./assetc/json.json\", 1);\n/* harmony import */ var _assetc_webpack_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assetc/webpack.png */ \"./assetc/webpack.png\");\n/* harmony import */ var _assetc_email_xml__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assetc/email.xml */ \"./assetc/email.xml\");\n/* harmony import */ var _assetc_email_xml__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assetc_email_xml__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assetc/TemplateImportOU.csv */ \"./assetc/TemplateImportOU.csv\");\n/* harmony import */ var _assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./css/main.css */ \"./css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_5__);\n\r\n\r\n\r\n\r\n\r\n\r\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Уроки webpack', _assetc_webpack_png__WEBPACK_IMPORTED_MODULE_2__[\"default\"])\r\nconsole.log('Post:', post.toString())\r\nconsole.log('JSON:',_assetc_json__WEBPACK_IMPORTED_MODULE_1__)\r\nconsole.log('xml', _assetc_email_xml__WEBPACK_IMPORTED_MODULE_3___default.a)\r\nconsole.log('csv', _assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_4___default.a)\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _models_Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @models/Post */ \"./models/Post.js\");\n/* harmony import */ var _assetc_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assetc/json */ \"./assetc/json.json\");\nvar _assetc_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./assetc/json */ \"./assetc/json.json\", 1);\n/* harmony import */ var _assetc_webpack__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assetc/webpack */ \"./assetc/webpack.png\");\n/* harmony import */ var _assetc_email_xml__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assetc/email.xml */ \"./assetc/email.xml\");\n/* harmony import */ var _assetc_email_xml__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assetc_email_xml__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assetc/TemplateImportOU.csv */ \"./assetc/TemplateImportOU.csv\");\n/* harmony import */ var _assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./css/main.css */ \"./css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_5__);\n\r\n\r\n\r\n\r\n\r\n\r\nconst post = new _models_Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Уроки webpack', _assetc_webpack__WEBPACK_IMPORTED_MODULE_2__[\"default\"])\r\nconsole.log('Post:', post.toString())\r\nconsole.log('JSON:',_assetc_json__WEBPACK_IMPORTED_MODULE_1__)\r\nconsole.log('xml', _assetc_email_xml__WEBPACK_IMPORTED_MODULE_3___default.a)\r\nconsole.log('csv', _assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_4___default.a)\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./models/Post.js":
+/*!************************!*\
+  !*** ./models/Post.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\nclass Post{\r\n\tconstructor(title, img){\r\n\t\tthis.title = title\r\n\t\tthis.img = img\r\n\t\tthis.date = new Date \r\n\t}\r\n\r\n\ttoString(){\r\n\t\treturn JSON.stringify({\r\n\t\t\ttitle: this.title,\r\n\t\t\timg: this.img,\r\n\t\t\tdate: this.date.toJSON()\r\n\t\t})\r\n\t}\r\n\r\n\tget postUpperCase(){\r\n\t\treturn this.title.toUpperCase()\r\n\t}\r\n}\n\n//# sourceURL=webpack:///./models/Post.js?");
 
 /***/ })
 
