@@ -1,13 +1,19 @@
+@import 'fonts.css';
+body{
+	font-family: 'Roboto', sans-serif;
+}
 .container{
 	max-width: 1200px;
 	margin: 0 auto;
-}
-h1{
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 .logo{
+	display: block;
 	background-image: url('../assetc/webpack.png');
 	background-size: cover;
 	width: 300px;
-	height: 200px;
+	height: 300px;
 }
