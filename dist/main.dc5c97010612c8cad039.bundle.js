@@ -148,23 +148,12 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./index.js","vendors~analytics~main","vendors~main"]);
+/******/ 	deferredModules.push(["./index.js","vendors~analytics~main"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "../node_modules/css-loader/dist/cjs.js!./css/main.css":
-/*!*************************************************************!*\
-  !*** ../node_modules/css-loader/dist/cjs.js!./css/main.css ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"../node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_AT_RULE_IMPORT_0___ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!normalize.css */ \"../node_modules/css-loader/dist/cjs.js!../node_modules/normalize.css/normalize.css\");\nvar ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ \"../node_modules/css-loader/dist/runtime/getUrl.js\");\nvar ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ../assetc/webpack.png */ \"./assetc/webpack.png\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.i(___CSS_LOADER_AT_RULE_IMPORT_0___, \"@import 'fonts.css'\");\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);\n// Module\nexports.push([module.i, \"body{\\r\\n\\tfont-family: 'Roboto', sans-serif;\\r\\n}\\r\\n.container{\\r\\n\\tmax-width: 1200px;\\r\\n\\tmargin: 0 auto;\\r\\n\\tdisplay: flex;\\r\\n\\tjustify-content: center;\\r\\n\\talign-items: center;\\r\\n\\tflex-direction: column;\\r\\n}\\r\\n.logo{\\r\\n\\tdisplay: block;\\r\\n\\tbackground-image: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\r\\n\\tbackground-size: cover;\\r\\n\\twidth: 300px;\\r\\n\\theight: 300px;\\r\\n}\\r\\n.red{\\r\\n\\tcolor: red;\\r\\n}\\r\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./css/main.css?../node_modules/css-loader/dist/cjs.js");
-
-/***/ }),
 
 /***/ "./assetc/TemplateImportOU.csv":
 /*!*************************************!*\
@@ -218,7 +207,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./main.css */ \"../node_modules/css-loader/dist/cjs.js!./css/main.css\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./css/main.css?");
+eval("// extracted by mini-css-extract-plugin\n    if(false) { var cssReload; }\n  \n\n//# sourceURL=webpack:///./css/main.css?");
 
 /***/ }),
 
@@ -230,7 +219,7 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _models_Post__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @models/Post */ \"./models/Post.js\");\n/* harmony import */ var _assetc_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assetc/json */ \"./assetc/json.json\");\nvar _assetc_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./assetc/json */ \"./assetc/json.json\", 1);\n/* harmony import */ var _assetc_webpack__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assetc/webpack */ \"./assetc/webpack.png\");\n/* harmony import */ var _assetc_email_xml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assetc/email.xml */ \"./assetc/email.xml\");\n/* harmony import */ var _assetc_email_xml__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assetc_email_xml__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assetc/TemplateImportOU.csv */ \"./assetc/TemplateImportOU.csv\");\n/* harmony import */ var _assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./css/main.css */ \"./css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_6__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst post = new _models_Post__WEBPACK_IMPORTED_MODULE_1__[\"default\"]('Уроки webpack', _assetc_webpack__WEBPACK_IMPORTED_MODULE_3__[\"default\"])\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0__('pre').addClass('red').html(post.toString())\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _models_Post__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @models/Post */ \"./models/Post.js\");\n/* harmony import */ var _assetc_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assetc/json */ \"./assetc/json.json\");\nvar _assetc_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./assetc/json */ \"./assetc/json.json\", 1);\n/* harmony import */ var _assetc_webpack__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assetc/webpack */ \"./assetc/webpack.png\");\n/* harmony import */ var _assetc_email_xml__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assetc/email.xml */ \"./assetc/email.xml\");\n/* harmony import */ var _assetc_email_xml__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assetc_email_xml__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assetc/TemplateImportOU.csv */ \"./assetc/TemplateImportOU.csv\");\n/* harmony import */ var _assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assetc_TemplateImportOU_csv__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./css/main.css */ \"./css/main.css\");\n/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_css_main_css__WEBPACK_IMPORTED_MODULE_6__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst post = new _models_Post__WEBPACK_IMPORTED_MODULE_1__[\"default\"]('Уроки webpack', _assetc_webpack__WEBPACK_IMPORTED_MODULE_3__[\"default\"])\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0__('pre').addClass('red').html(post.toString())\r\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 

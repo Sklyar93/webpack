@@ -1,10 +1,34 @@
 const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const{CleanWebpackPlugin} = require('clean-webpack-plugin')//очищение в папке dist от страых фаилов
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')//перенос фаилов
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin')
+const OptimizeCssAssetsWebpack = require('optimize-css-assets-webpack-plugin')
+const isDev = process.env.NODE_ENV === "development"// определение режим разработки
+const isProd = process.env.NODE_ENV === "production"// определение режим сборки
+
+
+const optimizations = ()=>{
+	const config = {//оптимизация фаилов
+		splitChunks: {
+			chunks : 'all'
+		}
+	}
+	if(isProd){
+		config.minimizer = [
+			new OptimizeCssAssetsWebpack(),
+			new TerserWebpackPlugin()	
+		]
+	}
+	return config
+}
 module.exports = {
 	context: path.resolve(__dirname, 'src'), //работать с папкой src
 	mode: 'development', // режим разработки
+	devServer: {
+		hot: isDev
+	},
 	entry:{
 		main: './index.js', // входной фаил
 		analytics: './analytics.js'
@@ -13,21 +37,20 @@ module.exports = {
 		filename: '[name].[contenthash].bundle.js', //формирование для разных фаилов и для обхода кэша
 		path: path.resolve(__dirname, 'dist')
 	},
-	resolve:{
+	resolve:{// понимание форматов
 		extensions: ['.js', '.json', '.png'],
 		alias: {
 			'@models': path.resolve(__dirname, 'src/models')
 		}
 	},
-	optimization:{
-		splitChunks: {
-			chunks : 'all'
-		}
-	},
+	optimization: optimizations(),
 	plugins: [
-		new htmlWebpackPlugin(
+		new htmlWebpackPlugin(//добавление хэш фаилов js
 			{
-				template: './index.html'
+				template: './index.html',
+				minify: {
+        			collapseWhitespace: isProd
+				}
 			}
 		),
 		new CleanWebpackPlugin(),
@@ -36,12 +59,25 @@ module.exports = {
 				from: path.resolve(__dirname, 'src/favicon.ico'),
 				to: path.resolve(__dirname, 'dist')
 			}
-		])
+		]),
+		new MiniCssExtractPlugin([{
+			filename: '[name].[contenthash].bundle.css', //формирование для разных фаилов и для обхода кэша
+			path: path.resolve(__dirname, 'dist')
+		}])
 	],
 	module: {
 		rules: [{
 			test: /\.css$/,
-			use: ['style-loader','css-loader']
+			use: [
+          		{
+		            loader: MiniCssExtractPlugin.loader,
+		            options: {
+		            	hmr: isDev,//без презагрузки страницы
+		            	reloadAll: true,
+		            	},
+	          	},
+	          	'css-loader',
+        	],
 		},
 		{
 			test: /\.(png|svg|jpg|gif)$/,
@@ -61,3 +97,4 @@ module.exports = {
 		}]
 	}
 }
+console.log("prod:", isProd)
