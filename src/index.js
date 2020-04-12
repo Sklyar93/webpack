@@ -5,6 +5,7 @@ import webpackLogo from './assetc/webpack'
 import xml from './assetc/email.xml'
 import csv from './assetc/TemplateImportOU.csv'
 import './css/main.css'
+import './css/main.sass'
 const post = new Post('Уроки webpack', webpackLogo)
 
 $('pre').addClass('red').html(post.toString())

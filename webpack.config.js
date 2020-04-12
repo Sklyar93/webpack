@@ -23,6 +23,27 @@ const optimizations = ()=>{
 	}
 	return config
 }
+const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
+const cssLoaders = ext => {
+	cssloader = [
+	{
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+        	hmr: isDev,//без презагрузки страницы
+        	reloadAll: true,
+        },
+	},
+	'css-loader'
+	]
+
+	if(ext){
+		cssloader.push(ext)
+	}
+
+	return cssloader.map((elem) =>{ 
+		return elem
+	})
+}
 module.exports = {
 	context: path.resolve(__dirname, 'src'), //работать с папкой src
 	mode: 'development', // режим разработки
@@ -34,7 +55,7 @@ module.exports = {
 		analytics: './analytics.js'
 	},
 	output: { // куда складывать
-		filename: '[name].[contenthash].bundle.js', //формирование для разных фаилов и для обхода кэша
+		filename: filename('js'), //формирование для разных фаилов и для обхода кэша
 		path: path.resolve(__dirname, 'dist')
 	},
 	resolve:{// понимание форматов
@@ -61,23 +82,20 @@ module.exports = {
 			}
 		]),
 		new MiniCssExtractPlugin([{
-			filename: '[name].[contenthash].bundle.css', //формирование для разных фаилов и для обхода кэша
+			filename: filename('css'), //формирование для разных фаилов и для обхода кэша
 			path: path.resolve(__dirname, 'dist')
 		}])
 	],
 	module: {
-		rules: [{
+		rules: [
+		{
 			test: /\.css$/,
-			use: [
-          		{
-		            loader: MiniCssExtractPlugin.loader,
-		            options: {
-		            	hmr: isDev,//без презагрузки страницы
-		            	reloadAll: true,
-		            	},
-	          	},
-	          	'css-loader',
-        	],
+			use: cssLoaders()
+
+		},
+		{
+			test: /\.sass$/,
+			use: cssLoaders('sass-loader')
 		},
 		{
 			test: /\.(png|svg|jpg|gif)$/,
