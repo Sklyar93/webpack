@@ -1,7 +1,7 @@
 import * as $ from 'jquery'
-function createAnalytics(){
-	let count = 0
-	let isDestroyed = false
+function createAnalytics(): object{
+	let count: number = 0
+	let isDestroyed: boolean = false
 
 	const listener = ()=> count++
 
@@ -21,4 +21,4 @@ function createAnalytics(){
 	
 }
 
-window.analytics = createAnalytics()
+window['analytics'] = createAnalytics()

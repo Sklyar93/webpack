@@ -24,7 +24,8 @@ const optimizations = ()=>{
 	return config
 }
 const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
-const cssLoaders = ext => {
+
+const cssLoaders = extra => {
 	cssloader = [
 	{
         loader: MiniCssExtractPlugin.loader,
@@ -36,14 +37,27 @@ const cssLoaders = ext => {
 	'css-loader'
 	]
 
-	if(ext){
-		cssloader.push(ext)
+	if(extra){
+		cssloader.push(extra)
 	}
 
-	return cssloader.map((elem) =>{ 
-		return elem
-	})
+	return cssloader
 }
+
+const babelOptions = preset => {
+	let presets = ['@babel/preset-env']
+	const option = {
+		presets : presets,
+		plugins : [
+			'@babel/plugin-proposal-class-properties'
+		]
+	}
+	if(preset){
+		presets.push(preset)
+	}
+	return option
+}
+
 module.exports = {
 	context: path.resolve(__dirname, 'src'), //работать с папкой src
 	mode: 'development', // режим разработки
@@ -51,8 +65,8 @@ module.exports = {
 		hot: isDev
 	},
 	entry:{
-		main: './index.js', // входной фаил
-		analytics: './analytics.js'
+		main: ['@babel/polyfill','./index.jsx'], // входной фаил
+		analytics: './analytics.ts'
 	},
 	output: { // куда складывать
 		filename: filename('js'), //формирование для разных фаилов и для обхода кэша
@@ -88,6 +102,30 @@ module.exports = {
 	],
 	module: {
 		rules: [
+		{ 
+			test: /\.js$/, 
+			exclude: /node_modules/, 
+			loader: { 
+				loader: "babel-loader",
+				options: babelOptions()
+			} 
+		},
+		{ 
+			test: /\.ts$/, 
+			exclude: /node_modules/, 
+			loader: { 
+				loader: "babel-loader",
+				options: babelOptions('@babel/preset-typescript')
+			} 
+		},
+		{ 
+			test: /\.jsx$/, 
+			exclude: /node_modules/, 
+			loader: { 
+				loader: "babel-loader",
+				options: babelOptions('@babel/preset-react')
+			} 
+		},
 		{
 			test: /\.css$/,
 			use: cssLoaders()
